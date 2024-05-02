@@ -1,0 +1,390 @@
+@import url(../reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  display: grid;
+  grid-template-columns: 0.25fr 1fr;
+
+  font-family: Poppins, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+/* HEADER */
+.header {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 4;
+
+  background-color: #21201e;
+}
+
+.header__logo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: left;
+
+  margin-top: 10%;
+  margin-left: 10%;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 109%;
+  letter-spacing: 0.06em;
+}
+
+.sidebar__item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: left;
+  margin: 15% 0;
+
+  margin-left: 10%;
+}
+
+.sidebar__item img {
+  margin-right: 5%;
+}
+
+.sidebar__item a {
+  color: #ffffff;
+  text-decoration: none;
+
+  transition: 400ms;
+}
+
+.sidebar__item a:hover {
+  color: #6100c2;
+}
+
+.sidebar__item a:active {
+  transition: 0ms;
+
+  color: #ffffff;
+}
+
+.sidebar__community {
+  margin-top: 40%;
+}
+
+.sidebar__settings {
+  margin-top: 60%;
+}
+
+/* NAVIGATION*/
+.nav {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+
+  background-image: url(../../assets/images/home-background.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.nav__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3%;
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.menu__item {
+  margin-left: 25px;
+
+  font-weight: 500;
+  font-size: 16px;
+
+  color: #ffffff;
+  text-decoration: none;
+
+  transition: 400ms;
+}
+
+.menu__item:hover {
+  color: #6100c2;
+}
+
+.menu__item:active {
+  transition: 0ms;
+
+  color: #ffffff;
+}
+
+.header__profile {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.profile__search {
+  margin-right: 15px;
+}
+
+.profile__notifications {
+  margin-right: 15px;
+}
+
+.search__icon {
+  color: #ffffff;
+  margin-bottom: -7px;
+
+  transition: 400ms;
+}
+
+.search__icon:hover {
+  color: #6100c2;
+}
+
+.search__icon:active {
+  transition: 1ms;
+
+  color: #ffffff;
+}
+
+.notifications__icon {
+  color: #ffffff;
+  margin-bottom: -7px;
+
+  transition: 400ms;
+}
+
+.notifications__icon:hover {
+  color: #6100c2;
+}
+
+.notifications__icon:active {
+  transition: 1ms;
+
+  color: #ffffff;
+}
+
+.profile__icon {
+  width: 32px;
+  height: 32px;
+}
+
+.profile__name {
+  margin-left: 5px;
+
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  color: #ffffff;
+  transition: 400ms;
+}
+
+.profile__name:hover {
+  color: #6100c2;
+}
+
+.profile__name:active {
+  transition: 0ms;
+  color: #ffffff;
+}
+
+.nav__info {
+  margin-left: 25px;
+
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10%;
+}
+
+.info__title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 100%;
+}
+
+.info__caption {
+  margin-top: 25px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 143%;
+}
+
+.info__buttons {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 35px;
+}
+
+.buttons__watch {
+  text-align: center;
+
+  border-radius: 14px;
+  padding: 17px 24px;
+  width: 14%;
+  height: 54px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+
+  color: #ffffff;
+  background-color: #6100c2;
+  border: 0;
+  text-decoration: none;
+
+  transition: 400ms;
+}
+
+.buttons__watch:hover {
+  background-color: #ffffff;
+  scale: 0.95;
+  color: #6100c2;
+}
+
+.buttons__watch:active {
+  transition: 1ms;
+
+  border: 2px solid #6100c2;
+}
+
+.buttons__favourite {
+  margin-left: 1%;
+  border-radius: 14px;
+  padding: 15px;
+  width: 54px;
+  height: 54px;
+  background-color: #ffffff;
+}
+
+.favourite__icon {
+  color: #6100c2;
+  fill: #ffffff;
+
+  transition: 400ms;
+}
+
+.favourite__icon:hover {
+  fill: #6100c2;
+}
+
+/* TRENDS */
+.main {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+
+.main__title {
+  font-weight: 600;
+  font-size: 20px;
+  margin-left: 25px;
+}
+
+.main__trendcards {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 2.5%;
+}
+
+.trendcards__trend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  border: 1px solid #969696;
+  border-radius: 20px;
+  width: 255px;
+  height: 301px;
+}
+
+.trend-1 {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../assets/images/trend1_background.jpg);
+}
+
+.trend-2 {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../assets/images/trend2_background.jpg);
+}
+
+.trend-3 {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../assets/images/trend3_background.jpg);
+}
+
+.trend-4 {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../../assets/images/trend4_background.jpg);
+}
+
+.trend___heart {
+  border-radius: 8px;
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  margin-top: 10%;
+  margin-left: 70%;
+}
+
+.heart__icon {
+  color: #6100c2;
+  fill: #ffffff;
+  width: 100%;
+  height: 100%;
+
+  transition: 400ms;
+}
+
+.heart__icon:hover {
+  fill: #6100c2;
+}
+
+.trend__name {
+  border-radius: 0 0 20px 20px;
+  width: 255px;
+  height: 86px;
+  backdrop-filter: blur(20px);
+  background: linear-gradient(148deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0.95;
+
+  transition: 400ms;
+}
+
+.trend__name:hover {
+  opacity: 0;
+}
+
+.name__title {
+  margin-left: 7%;
+  margin-top: 10%;
+
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  color: #000;
+}
+
+.name__caption {
+  margin-left: 7%;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 114%;
+  color: #000;
+}
