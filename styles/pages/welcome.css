@@ -9,14 +9,17 @@ body {
   font-family: Poppins, sans-serif;
   text-align: center;
   color: #ffffff;
+}
 
+.main {
   display: flex;
+  height: 100vh;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
 }
 
-.logo {
+.main__logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +50,8 @@ body {
   display: block;
   margin: 1% auto;
 
+  cursor: pointer;
+
   border-radius: 14px;
   padding: 17px 24px;
   width: 225px;
@@ -62,7 +67,6 @@ body {
 
 .section__a:hover {
   background-color: #ffffff;
-  scale: 0.95;
   color: #6100c2;
 }
 
@@ -81,9 +85,9 @@ body {
 .section__caption-a {
   color: #ffffff;
 
+  cursor: pointer;
   font-weight: 700;
   text-decoration: underline;
-  text-decoration-skip-ink: none;
 
   transition: 200ms;
 }
@@ -96,4 +100,101 @@ body {
   transition: 1ms;
 
   color: #ffffff;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal__content {
+  background-color: #6100c2;
+  color: #ffffff;
+  font-family: Poppins, sans-serif;
+  border-radius: 14px;
+
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  height: 50%;
+}
+
+.content__close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+
+  transition: 400ms;
+}
+
+.content__close:hover,
+.content__close:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.content__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 60%;
+}
+
+.form__password,
+.form__username {
+  color: #6100c2;
+}
+
+.form__button {
+  display: block;
+  margin: 1% auto;
+
+  cursor: pointer;
+
+  border-radius: 14px;
+  width: 180px;
+  height: 44px;
+
+  color: #6100c2;
+  background-color: #ffffff;
+  border: none;
+
+  transition: 400ms;
+}
+
+.form__button:hover {
+  color: #ffffff;
+  box-shadow: 0 0 20px 0 #ffffff;
+  background-color: transparent;
+}
+
+/* ADAPTATION */
+@media (max-width: 520px) {
+  .modal__content {
+    font-size: 12px;
+    text-align: center;
+    width: 60%;
+  }
+
+  .content__close { 
+    font-size: 18px;
+  }
+
+  
+  .form__button {
+    padding: 0;
+    width: 100px;
+    height: 40px;
+  }
 }

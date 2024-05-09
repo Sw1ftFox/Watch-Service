@@ -9,15 +9,33 @@
 </head>
 
 <body>
-  <div class="logo">
-    <img class="logo__icon" src="./assets/icons/coffee.svg" alt="coffee icon">
-    <div class="logo__text">WATCH</div>
+  <main class="main">
+    <div class="main__logo">
+      <img class="logo__icon" src="./assets/icons/coffee.svg" alt="coffee icon">
+      <div class="logo__text">WATCH</div>
+    </div>
+    <section class="main__section">
+      <div class="section__text">Enjoy the newest movies</div>
+      <div class="section__a openModal">Login</div>
+      <div class="section__caption">No account? <span class="section__caption-a">Sign up</span></div>
+    </section>
+  </main>
+
+  <div class="modal">
+    <div class="modal__content">
+      <span class="content__close">&times;</span>
+      <h2>Login to account</h2>
+      <form class="content__form">
+        <label for="form__username">Login:</label>
+        <input type="text" class="form__username" name="username" required>
+        <label for="form__password">Password:</label>
+        <input type="password" class="form__password" name="password" required>
+        <input class="form__button" type="submit" value="Login">
+      </form>
+    </div>
   </div>
-  <section class="section">
-    <div class="section__text">Enjoy the newest movies</div>
-    <a class="section__a" href="./pages/home.html">Login</a>
-    <div class="section__caption">No account? <a class="section__caption-a" href="#">Sign up</a></div>
-  </section>
+
+  <script src="./index.js"></script>
 </body>
 
 </html>
