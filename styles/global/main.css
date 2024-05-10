@@ -805,6 +805,10 @@ body {
     margin-top: 0;
   }
 
+  .main__title {
+    margin-top: 5%;
+  }
+
   .header__menu {
     flex-direction: column;
     justify-content: space-around;

@@ -412,10 +412,6 @@
 }
 
 @media (max-width: 440px) {
-  .main__title {
-    margin-top: 5%;
-  }
-
   .currentcard__img {
     height: 140px;
   }
