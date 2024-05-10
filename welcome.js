@@ -42,6 +42,6 @@ form.addEventListener("submit", function (event) {
   let formPassword = document.querySelector(".form__password").value.trim();
 
   if (formLogin && formPassword) {
-    window.location.href = "../../pages/home.html";
+    window.location.href = "./pages/home.html";
   }
 });
