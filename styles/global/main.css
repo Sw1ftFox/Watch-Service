@@ -10,6 +10,30 @@ body {
   color: white;
 }
 
+/* scrollToTopBtn */
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 12vw;
+  z-index: 99;
+  background-color: #6100c2;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+
+  transition: 400ms;
+}
+
+#scrollToTopBtn:hover {
+  background-color: #ffffff;
+  color: #6100c2;
+}
+
 /* HEADER */
 .header {
   grid-column-start: 1;
