@@ -1,105 +1,87 @@
 /* NAVIGATION*/
+.main,
 .nav {
   grid-column-start: 2;
   grid-column-end: 3;
-
+}
+.trend-1,
+.trend-2,
+.trend-3,
+.trend-4 {
+  background-size: cover;
+  background-position: center;
+}
+.favourite__icon:hover,
+.heart__icon:hover {
+  fill: #6100c2;
+}
+.nav {
   grid-row-start: 1;
   grid-row-end: 2;
   height: 40%;
 }
-
 /* TRENDS */
 .main {
   margin-top: 5%;
-
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 4;
 }
-
 .main__title {
   font-weight: 600;
   font-size: 20px;
   margin-left: 25px;
 }
-
 .main__trendcards {
   display: flex;
   justify-content: space-around;
   margin-top: 2.5%;
 }
-
 .trendcards__trend {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   border: 1px solid #969696;
   border-radius: 20px;
   width: 255px;
   height: 301px;
 }
-
 .trend-1 {
-  background-size: cover;
-  background-position: center;
   background-image: url(../../assets/images/trend1_background.jpg);
 }
-
 .trend-2 {
-  background-size: cover;
-  background-position: center;
   background-image: url(../../assets/images/trend2_background.jpg);
 }
-
 .trend-3 {
-  background-size: cover;
-  background-position: center;
   background-image: url(../../assets/images/trend3_background.jpg);
 }
-
 .trend-4 {
-  background-size: cover;
-  background-position: center;
   background-image: url(../../assets/images/trend4_background.jpg);
 }
-
 .heart__icon {
   color: #6100c2;
   fill: #ffffff;
   width: 100%;
   height: 100%;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
-.heart__icon:hover {
-  fill: #6100c2;
-}
-
 .trend__name {
   border-radius: 0 0 20px 20px;
   width: 255px;
   height: 86px;
   backdrop-filter: blur(20px);
-  background: linear-gradient(148deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(148deg, #fff 0, rgba(255, 255, 255, 0) 100%);
   opacity: 0.95;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
 .name__title {
   margin-left: 7%;
   margin-top: 10%;
-
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
   color: #000;
 }
-
 /* Current Card Block */
 .main__currentcard {
   margin-top: 2.5%;
@@ -107,63 +89,47 @@
   display: flex;
   align-items: center;
 }
-
 .currentcard__img {
   flex: 1;
   height: 431px;
-
   background-image: url(../../assets/images/trend4_image.jpg);
   background-size: cover;
   background-position: center;
-
   margin-right: 5%;
-
   border: 1px solid #969696;
   border-radius: 20px;
 }
-
 .currentcard__container {
   flex: 1;
 }
-
 .container__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .title__name {
   font-weight: 600;
   font-size: 32px;
   line-height: 125%;
 }
-
+.container__info,
+.title__rating {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 133%;
+}
 .title__rating {
   display: flex;
   align-items: center;
-
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 133%;
-
   margin-right: 5%;
 }
-
 .rating__star {
-  color: yellow;
+  color: #ff0;
   margin-right: 3%;
 }
-
-.container__info {
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 133%;
-}
-
 .container__info span {
   margin-right: 7%;
 }
-
 .container__text {
   font-weight: 400;
   font-size: 16px;
@@ -174,87 +140,65 @@
   align-items: center;
   margin-top: 4%;
 }
-
 .buttons__button {
   text-align: center;
-
   border-radius: 14px;
   padding: 17px 24px;
   width: 150px;
   height: 54px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 125%;
-
-  color: #ffffff;
+  color: #fff;
   background-color: #6100c2;
   border: 0;
   text-decoration: none;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
 .buttons__button:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   scale: 0.95;
   color: #6100c2;
 }
-
 .buttons__button:active {
   transition: 1ms;
-
   border: 2px solid #6100c2;
 }
-
 .buttons__favourite {
   margin-left: 5%;
   border-radius: 14px;
   padding: 15px;
   width: 54px;
   height: 54px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
-
 .favourite__icon {
   color: #6100c2;
   fill: #ffffff;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
-.favourite__icon:hover {
-  fill: #6100c2;
-}
-
 /* ADAPTATION */
 @media (max-width: 2560px) {
   .currentcard__img {
     height: 720px;
     border-radius: 45px;
   }
-
   .title__name {
     font-size: 40px;
   }
-
   .title__rating {
     font-size: 30px;
   }
-
   .rating__star {
     width: 36px;
     height: 36px;
   }
-
   .container__info {
     font-size: 24px;
   }
-
   .container__text {
     font-size: 26px;
   }
-
   .buttons__button {
     height: 80px;
     width: 40%;
@@ -263,180 +207,134 @@
     font-size: 26px;
   }
 }
-
 @media (max-width: 1600px) {
   .currentcard__img {
     height: 520px;
   }
-
   .title__name {
     font-size: 30px;
   }
-
   .title__rating {
     font-size: 26px;
   }
-
   .rating__star {
     width: 30px;
     height: 30px;
   }
-
   .container__info {
     font-size: 22px;
   }
-
   .container__text {
     font-size: 24px;
   }
-
   .buttons__button {
     font-size: 24px;
     height: 60px;
     line-height: 60px;
   }
 }
-
 @media (max-width: 1290px) {
   .currentcard__img {
     height: 360px;
   }
-
   .title__name {
     font-size: 26px;
   }
-
   .title__rating {
     font-size: 18px;
   }
-
   .rating__star {
     width: 24px;
     height: 24px;
   }
-
-  .container__info {
-    font-size: 15px;
-  }
-
+  .container__info,
   .container__text {
     font-size: 15px;
   }
-
   .buttons__button {
     font-size: 15px;
     height: 52px;
     line-height: 52px;
   }
 }
-
 @media (max-width: 1020px) {
   .main {
     margin-top: 2%;
   }
-
   .currentcard__img {
     height: 320px;
   }
-
   .title__name {
     font-size: 21px;
   }
 }
-
 @media (max-width: 810px) {
   .main {
     margin-top: 0;
   }
-
   .currentcard__img {
     height: 260px;
   }
-
   .title__name {
     font-size: 18px;
   }
-
   .title__rating {
     font-size: 16px;
   }
-
   .rating__star {
     width: 20px;
     height: 20px;
   }
-
-  .container__info {
-    font-size: 14px;
-  }
-
+  .container__info,
   .container__text {
     font-size: 14px;
   }
-
   .buttons__button {
     font-size: 14px;
     height: 44px;
     line-height: 44px;
   }
 }
-
 @media (max-width: 700px) {
   .main {
     margin-top: 5%;
   }
-
   .currentcard__img {
     height: 210px;
     border-radius: 14px;
   }
-
-  .container__info {
-    font-size: 12px;
+  .buttons__button,
+  .buttons__favourite {
+    border-radius: 8px;
   }
-
+  .container__info,
   .container__text {
     font-size: 12px;
   }
-
   .buttons__button {
     font-size: 12px;
     height: 44px;
     line-height: 44px;
-    border-radius: 8px;
-  }
-
-  .buttons__favourite {
-    border-radius: 8px;
   }
 }
-
 @media (max-width: 440px) {
   .currentcard__img {
     height: 140px;
   }
-
   .title__name {
     font-size: 17px;
   }
-
   .rating__star {
     width: 16px;
     height: 16px;
   }
-
   .title__rating {
     font-size: 13px;
   }
-
-  .container__info {
-    font-size: 10px;
-  }
-
+  .container__info,
   .container__text {
     font-size: 10px;
   }
-
   .buttons__button {
     font-size: 9px;
   }

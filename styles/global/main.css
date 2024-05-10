@@ -1,15 +1,19 @@
 @import url(../reset.css);
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url(https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+.header,
+body {
+  background-color: #21201e;
+}
+.menu__item:hover,
+.sidebar__item a:hover {
+  color: #6100c2;
+}
 body {
   display: grid;
   grid-template-columns: 0.25fr 1fr;
-
   font-family: Poppins, sans-serif;
-  background-color: #21201e;
-  color: white;
+  color: #fff;
 }
-
 /* scrollToTopBtn */
 #scrollToTopBtn {
   display: none;
@@ -18,277 +22,195 @@ body {
   left: 12vw;
   z-index: 99;
   background-color: #6100c2;
-  color: white;
+  color: #fff;
   border: none;
   border-radius: 15px;
   cursor: pointer;
   padding: 15px;
   font-size: 16px;
   font-weight: 500;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
 #scrollToTopBtn:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   color: #6100c2;
 }
-
 /* HEADER */
 .header {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 4;
-
-  background-color: #21201e;
   box-shadow: 2px 0 90px 0 rgba(97, 0, 194, 0.4);
 }
-
 .header__logo {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: left;
-
   margin-top: 10%;
   margin-left: 10%;
-
   font-weight: 700;
   font-size: 22px;
   line-height: 109%;
   letter-spacing: 0.06em;
 }
-
+.menu__item,
+.profile__name {
+  font-weight: 500;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.4s;
+}
 .logo__text {
   text-decoration: none;
-  color: #ffffff;
+  color: #fff;
 }
-
 .sidebar__item {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
   justify-content: left;
-  margin: 15% 0;
-
-  margin-left: 10%;
+  margin: 15% 0 15% 10%;
 }
-
 .sidebar__item img {
   margin-right: 5%;
 }
-
 .sidebar__item a {
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
-.sidebar__item a:hover {
-  color: #6100c2;
-}
-
 .sidebar__item a:active {
-  transition: 0ms;
-
-  color: #ffffff;
+  transition: none;
+  color: #fff;
 }
-
 .sidebar__community {
   margin-top: 40%;
 }
-
 .sidebar__settings {
   margin-top: 60%;
 }
-
 /* NAVIGATION */
 .nav__hamburger {
   display: none;
 }
-
 .hamburger__icon {
   width: 24px;
   height: 24px;
 }
-
+.profile__icon,
+.trend___heart {
+  width: 32px;
+  height: 32px;
+}
 .nav__header {
   display: flex;
   justify-content: space-between;
   margin-top: 3%;
 }
-
 .header__menu {
   display: flex;
   align-items: center;
 }
-
 .menu__item {
   margin-left: 25px;
-
-  font-weight: 500;
-  font-size: 16px;
-
-  color: #ffffff;
-  text-decoration: none;
-
-  transition: 400ms;
+  color: #fff;
 }
-
-.menu__item:hover {
-  color: #6100c2;
-}
-
 .menu__item:active {
-  transition: 0ms;
-
-  color: #ffffff;
+  transition: none;
+  color: #fff;
 }
-
 .header__profile {
   display: flex;
   align-items: center;
   margin-right: 25px;
 }
-
+.profile__notifications,
 .profile__search {
   margin-right: 15px;
 }
-
-.profile__notifications {
-  margin-right: 15px;
-}
-
+.notifications__icon,
 .search__icon {
-  color: #ffffff;
+  color: #fff;
   margin-bottom: -7px;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
 .search__icon:hover {
   color: #6100c2;
 }
-
 .search__icon:active {
   transition: 1ms;
-
-  color: #ffffff;
+  color: #fff;
 }
-
-.notifications__icon {
-  color: #ffffff;
-  margin-bottom: -7px;
-
-  transition: 400ms;
-}
-
 .notifications__icon:hover {
   color: #6100c2;
 }
-
 .notifications__icon:active {
   transition: 1ms;
-
-  color: #ffffff;
+  color: #fff;
 }
-
-.profile__icon {
-  width: 32px;
-  height: 32px;
-}
-
 .profile__name {
   margin-left: 5px;
-
-  font-weight: 500;
-  font-size: 16px;
-  text-decoration: none;
-  color: #ffffff;
-  transition: 400ms;
+  color: #fff;
 }
-
 .profile__name:hover {
   color: #6100c2;
 }
-
 .profile__name:active {
-  transition: 0ms;
-  color: #ffffff;
+  transition: none;
+  color: #fff;
 }
-
 /* TRENDS */
 .trend___heart {
   border-radius: 8px;
   padding: 8px;
-  width: 32px;
-  height: 32px;
   background-color: #fff;
   margin-top: 10%;
   margin-left: 70%;
 }
-
 .trend__name:hover {
   opacity: 0;
 }
-
 .name__caption {
   margin-left: 7%;
-
   font-weight: 400;
   font-size: 14px;
   line-height: 114%;
   color: #000;
 }
-
 /* ADAPTATION */
 @media (max-width: 2560px) {
   .header__logo {
     font-size: 42px;
   }
-
   .logo__icon {
     width: 50px;
     height: 50px;
   }
-
   .header__sidebar {
     font-size: 36px;
   }
-
-  .menu__item {
+  .menu__item,
+  .name__title,
+  .profile__name {
     font-size: 32px;
   }
-
+  .notifications__icon,
   .search__icon {
     width: 40px;
     height: 40px;
   }
-
-  .notifications__icon {
-    width: 40px;
-    height: 40px;
-  }
-
   .profile__icon {
     width: 60px;
     height: 60px;
   }
-
-  .profile__name {
-    font-size: 32px;
-  }
-
   .info__title {
     font-size: 90px;
   }
-
   .info__caption {
     font-size: 30px;
   }
-
   .buttons__watch {
     font-size: 32px;
     height: 80px;
@@ -296,426 +218,283 @@ body {
     line-height: 80px;
     width: 18%;
   }
-
   .buttons__favourite {
     height: 80px;
     width: 80px;
     padding: 0;
   }
-
   .favourite__icon {
     width: 100%;
     height: 100%;
     padding: 20px;
   }
-
   .main__title {
     font-size: 40px;
   }
-
   .trendcards__trend {
     width: 23%;
     height: 500px;
     border-radius: 40px;
   }
-
   .trend___heart {
     padding: 12px;
     width: 60px;
     height: 60px;
   }
-
   .trend__name {
     width: 100%;
     height: 28%;
   }
-
-  .name__title {
-    font-size: 32px;
-  }
-
   .name__caption {
     font-size: 24px;
   }
 }
-
 @media (max-width: 2000px) {
-  .header__logo {
-    font-size: 36px;
-  }
-
-  .header__sidebar {
-    font-size: 28px;
-  }
-
-  .info__title {
-    font-size: 68px;
-  }
-
-  .buttons__watch {
-    font-size: 28px;
-  }
-
-  .favourite__icon {
-    padding: 21px;
-  }
-
+  .header__logo,
   .main__title {
     font-size: 36px;
   }
-
-  .trendcards__trend {
-    height: 450px;
-  }
-
-  .trend___heart {
-    padding: 15px;
-  }
-
+  .buttons__watch,
+  .header__sidebar,
   .name__title {
     font-size: 28px;
   }
-
+  .info__title {
+    font-size: 68px;
+  }
+  .favourite__icon {
+    padding: 21px;
+  }
+  .trendcards__trend {
+    height: 450px;
+  }
+  .trend___heart {
+    padding: 15px;
+  }
   .name__caption {
     font-size: 22px;
   }
 }
-
 @media (max-width: 1600px) {
   .logo__icon {
     width: 42px;
     height: 42px;
   }
-
-  .header__logo {
+  .header__logo,
+  .main__title {
     font-size: 30px;
   }
-
-  .header__sidebar {
+  .header__sidebar,
+  .info__caption,
+  .menu__item,
+  .profile__name {
     font-size: 22px;
   }
-
-  .menu__item {
-    font-size: 22px;
-  }
-
+  .notifications__icon,
   .search__icon {
     width: 30px;
     height: 30px;
   }
-
-  .notifications__icon {
-    width: 30px;
-    height: 30px;
-  }
-
   .profile__icon {
     width: 40px;
     height: 40px;
   }
-
-  .profile__name {
-    font-size: 22px;
-  }
-
   .info__title {
     font-size: 48px;
   }
-
-  .info__caption {
-    font-size: 22px;
-  }
-
   .buttons__watch {
     font-size: 22px;
     height: 60px;
     line-height: 60px;
   }
-
   .buttons__favourite {
     height: 60px;
     width: 60px;
   }
-
   .info__buttons {
     padding-bottom: 35px;
   }
-
   .favourite__icon {
     padding: 16px;
   }
-
-  .main__title {
-    font-size: 30px;
-  }
-
   .trendcards__trend {
     height: 356px;
     border-radius: 24px;
   }
-
   .trend___heart {
     padding: 13px;
     width: 50px;
     height: 50px;
   }
-
   .name__title {
     font-size: 24px;
   }
-
   .name__caption {
     font-size: 19px;
   }
 }
-
 @media (max-width: 1290px) {
   .logo__icon {
     width: 34px;
     height: 34px;
   }
-
-  .header__logo {
+  .header__logo,
+  .main__title {
     font-size: 26px;
   }
-
-  .header__sidebar {
-    font-size: 18px;
-  }
-
-  .menu__item {
-    font-size: 18px;
-  }
-
+  .header__sidebar,
+  .info__caption,
+  .menu__item,
   .profile__name {
     font-size: 18px;
   }
-
   .info__title {
     font-size: 42px;
   }
-
-  .info__caption {
-    font-size: 18px;
-  }
-
   .buttons__watch {
     font-size: 18px;
     height: 52px;
     line-height: 52px;
   }
-
   .buttons__favourite {
     height: 52px;
     width: 52px;
   }
-
   .favourite__icon {
     padding: 15px;
   }
-
-  .main__title {
-    font-size: 26px;
-  }
-
   .trendcards__trend {
     height: 290px;
   }
-
   .trend___heart {
     width: 42px;
     height: 42px;
     padding: 12px;
   }
-
   .name__title {
     font-size: 19px;
   }
-
   .name__caption {
     font-size: 15px;
   }
 }
-
 @media (max-width: 1020px) {
   .logo__icon {
     width: 28px;
     height: 28px;
   }
-
   .header__logo {
     font-size: 18px;
   }
-
-  .header__sidebar {
-    font-size: 15px;
-  }
-
-  .menu__item {
-    font-size: 15px;
-  }
-
+  .header__sidebar,
+  .info__caption,
+  .menu__item,
+  .name__title,
   .profile__name {
     font-size: 15px;
   }
-
+  .notifications__icon,
   .search__icon {
     width: 20px;
     height: 20px;
   }
-
   .profile__icon {
     width: 26px;
     height: 26px;
   }
-
-  .notifications__icon {
-    width: 20px;
-    height: 20px;
-  }
-
   .info__title {
     font-size: 34px;
   }
-
-  .info__caption {
-    font-size: 15px;
-  }
-
   .buttons__watch {
     font-size: 15px;
     height: 44px;
     line-height: 44px;
     border-radius: 10px;
   }
-
   .buttons__favourite {
     height: 44px;
     width: 44px;
   }
-
   .favourite__icon {
     padding: 12px;
   }
-
   .main__title {
     font-size: 21px;
   }
-
   .trendcards__trend {
     height: 230px;
   }
-
   .trend___heart {
     width: 32px;
     height: 32px;
     padding: 8px;
   }
-
-  .name__title {
-    font-size: 15px;
-  }
-
   .name__caption {
     font-size: 12px;
   }
 }
-
 @media (max-width: 840px) {
   .logo__icon {
     width: 24px;
     height: 24px;
   }
-
-  .header__sidebar {
-    font-size: 14px;
-  }
-
-  .menu__item {
-    font-size: 14px;
-  }
-
+  .buttons__watch,
+  .header__sidebar,
+  .menu__item,
   .profile__name {
     font-size: 14px;
   }
-
   .info__title {
     font-size: 30px;
   }
-
-  .info__caption {
+  .info__caption,
+  .name__title {
     font-size: 13px;
   }
-
-  .buttons__watch {
-    font-size: 14px;
-  }
-
   .main__title {
     font-size: 18px;
   }
-
   .trendcards__trend {
     height: 192px;
   }
-
   .trend___heart {
     width: 30px;
     height: 30px;
     padding: 7px;
   }
-
-  .name__title {
-    font-size: 13px;
-  }
-
   .name__caption {
     font-size: 9px;
   }
 }
-
 @media (max-width: 700px) {
   .header__logo {
     font-size: 16px;
   }
-
-  .header__sidebar {
-    font-size: 12px;
-  }
-
-  .menu__item {
-    font-size: 12px;
-  }
-
+  .header__sidebar,
+  .menu__item,
   .profile__name {
     font-size: 12px;
   }
-
   .buttons__watch {
     font-size: 12px;
     height: 38px;
     line-height: 38px;
   }
-
   .buttons__favourite {
     height: 38px;
     width: 38px;
   }
-
   .favourite__icon {
     padding: 10px;
   }
-
   .nav__info {
     margin-top: 20%;
   }
-
   .main__trendcards {
     justify-content: center;
     flex-wrap: wrap;
     margin-left: 0;
   }
-
   .trendcards__trend {
     width: 40%;
     height: 262px;
@@ -724,75 +503,58 @@ body {
     margin-right: 2%;
     margin-left: 2%;
   }
-
   .trend__name {
     border-radius: 0 0 14px 14px;
     width: 100%;
   }
 }
-
 @media (max-width: 600px) {
+  .profile__icon,
+  .profile__name {
+    margin-top: 4px;
+  }
   .logo__icon {
     width: 19px;
     height: 19px;
   }
-
   .header__logo {
     font-size: 14px;
   }
-
-  .header__sidebar {
-    font-size: 11px;
-  }
-
-  .menu__item {
-    font-size: 11px;
-  }
-
+  .header__sidebar,
+  .menu__item,
   .profile__name {
     font-size: 11px;
-    margin-top: 4px;
   }
-
-  .profile__icon {
-    margin-top: 4px;
-  }
-
   .main__title {
     text-align: center;
     margin-left: 0;
   }
 }
-
 @media (max-width: 500px) {
+  .menu__item,
+  .profile__name {
+    font-size: 13px;
+  }
   .header {
     grid-column-start: none;
     display: none;
   }
-
+  .main,
   .nav {
     grid-column-start: 1;
   }
-
-  .main {
-    grid-column-start: 1;
-  }
-
   .nav__hamburger {
     display: block;
     margin-left: 25px;
     margin-top: 15px;
   }
-
   .header.show-header {
     z-index: 2;
     display: block;
     width: 60%;
     margin-left: -25%;
-
-    animation: slide-in 0.3s ease;
+    animation: 0.3s slide-in;
   }
-
   @keyframes slide-in {
     from {
       transform: translateX(-100%);
@@ -801,75 +563,51 @@ body {
       transform: translateX(0);
     }
   }
-
-  .menu__item {
-    font-size: 13px;
-  }
-
   .profile__name {
-    font-size: 13px;
     margin-top: 4px;
   }
-
   .header__profile {
     margin-top: -4px;
   }
-
   .buttons__watch {
     width: 26%;
   }
 }
-
 @media (max-width: 440px) {
-  .nav {
-    text-shadow: 1px 1px 5px black;
+  .menu__item,
+  .profile__name {
+    font-size: 16px;
   }
-
-  .main {
+  .nav {
+    text-shadow: 1px 1px 5px #000;
+  }
+  .main,
+  .profile__icon {
     margin-top: 0;
   }
-
   .main__title {
     margin-top: 5%;
   }
-
   .header__menu {
     flex-direction: column;
     justify-content: space-around;
     height: 90px;
     align-items: start;
   }
-
-  .menu__item {
-    font-size: 16px;
-  }
-
   .header__profile {
     align-items: start;
-  }
-
-  .header__profile {
     margin-top: 0;
   }
-
   .profile__name {
-    font-size: 16px;
     margin-top: 1px;
   }
-
-  .profile__icon {
-    margin-top: 0;
-  }
-
   .buttons__watch {
     text-shadow: none;
   }
-
   .trendcards__trend {
     height: 320px;
     width: 90%;
   }
-
   .trend___heart {
     width: 40px;
     height: 40px;

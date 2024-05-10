@@ -1,182 +1,142 @@
 /* NAVIGATION*/
+.main,
 .nav {
   grid-column-start: 2;
   grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 2;
-
-  background-image: linear-gradient(0deg, #191817 0%, rgba(0, 0, 0, 0) 92.7%),
-  url(../../assets/images/home-background.jpg);
+}
+.nav,
+.trend-1,
+.trend-2,
+.trend-3,
+.trend-4 {
   background-size: cover;
   background-position: center;
 }
-
+.favourite__icon:hover,
+.heart__icon:hover {
+  fill: #6100c2;
+}
+.nav {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  background-image: linear-gradient(0deg, #191817 0, rgba(0, 0, 0, 0) 92.7%),
+    url(../../assets/images/home-background.jpg);
+}
 .nav__info {
   margin-left: 25px;
-
   display: flex;
   flex-direction: column;
-
   margin-top: 10%;
 }
-
 .info__title {
   font-weight: 600;
   font-size: 48px;
   line-height: 100%;
 }
-
 .info__caption {
   margin-top: 25px;
   font-weight: 400;
   font-size: 14px;
   line-height: 143%;
 }
-
 .info__buttons {
   display: flex;
-
   margin-top: 35px;
 }
-
 .buttons__watch {
   text-align: center;
-
   border-radius: 14px;
   padding: 17px 24px;
   width: 15%;
   height: 54px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 125%;
-
-  color: #ffffff;
+  color: #fff;
   background-color: #6100c2;
   border: 0;
   text-decoration: none;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
 .buttons__watch:hover {
-  background-color: #ffffff;
+  background-color: #fff;
   scale: 0.95;
   color: #6100c2;
 }
-
 .buttons__watch:active {
   transition: 1ms;
-
   border: 2px solid #6100c2;
 }
-
 .buttons__favourite {
   margin-left: 1%;
   border-radius: 14px;
   padding: 15px;
   width: 54px;
   height: 54px;
-  background-color: #ffffff;
+  background-color: #fff;
 }
-
 .favourite__icon {
   color: #6100c2;
   fill: #ffffff;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
-.favourite__icon:hover {
-  fill: #6100c2;
-}
-
 /* TRENDS */
 .main {
-  grid-column-start: 2;
-  grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 4;
 }
-
 .main__title {
   margin-left: 25px;
   margin-top: 3%;
-
   font-weight: 600;
   font-size: 20px;
 }
-
 .main__trendcards {
   display: flex;
   justify-content: space-around;
   margin-top: 2.5%;
 }
-
 .trendcards__trend {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
   border: 1px solid #969696;
   border-radius: 20px;
   width: 255px;
   height: 301px;
 }
-
 .trend-1 {
-  background-size: cover;
-  background-position: center;
   background-image: url(../../assets/images/trend1_background.jpg);
 }
-
 .trend-2 {
-  background-size: cover;
-  background-position: center;
   background-image: url(../../assets/images/trend2_background.jpg);
 }
-
 .trend-3 {
-  background-size: cover;
-  background-position: center;
   background-image: url(../../assets/images/trend3_background.jpg);
 }
-
 .trend-4 {
-  background-size: cover;
-  background-position: center;
   background-image: url(../../assets/images/trend4_background.jpg);
 }
-
 .heart__icon {
   color: #6100c2;
   fill: #ffffff;
   width: 100%;
   height: 100%;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
-.heart__icon:hover {
-  fill: #6100c2;
-}
-
 .trend__name {
   border-radius: 0 0 20px 20px;
   width: 255px;
   height: 86px;
   backdrop-filter: blur(20px);
-  background: linear-gradient(148deg, #fff 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(148deg, #fff 0, rgba(255, 255, 255, 0) 100%);
   opacity: 0.95;
-
-  transition: 400ms;
+  transition: 0.4s;
 }
-
 .name__title {
   margin-left: 7%;
   margin-top: 10%;
-
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
