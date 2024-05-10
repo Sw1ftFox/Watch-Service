@@ -81,6 +81,15 @@ body {
 }
 
 /* NAVIGATION */
+.nav__hamburger {
+  display: none;
+}
+
+.hamburger__icon {
+  width: 24px;
+  height: 24px;
+}
+
 .nav__header {
   display: flex;
   justify-content: space-between;
@@ -723,11 +732,17 @@ body {
   .profile__icon {
     margin-top: 4px;
   }
+
+  .main__title {
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
 @media (max-width: 500px) {
   .header {
-    display: none; /*Реализовать появление по нажатию на гамбургер меню*/
+    grid-column-start: none;
+    display: none;
   }
 
   .nav {
@@ -736,6 +751,30 @@ body {
 
   .main {
     grid-column-start: 1;
+  }
+
+  .nav__hamburger {
+    display: block;
+    margin-left: 25px;
+    margin-top: 15px;
+  }
+
+  .header.show-header {
+    z-index: 2;
+    display: block;
+    width: 60%;
+    margin-left: -25%;
+
+    animation: slide-in 0.3s ease;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
 
   .menu__item {
@@ -800,5 +839,11 @@ body {
   .trendcards__trend {
     height: 320px;
     width: 90%;
+  }
+
+  .trend___heart {
+    width: 40px;
+    height: 40px;
+    padding: 9px;
   }
 }

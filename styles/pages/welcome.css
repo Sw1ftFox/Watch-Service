@@ -54,8 +54,8 @@ body {
 
   border-radius: 14px;
   padding: 17px 24px;
-  width: 225px;
-  height: 54px;
+  width: 140px;/*225*/
+  /* height: 54px; */
 
   color: #ffffff;
   background-color: #6100c2;
@@ -187,14 +187,20 @@ body {
     width: 60%;
   }
 
-  .content__close { 
+  .content__close {
     font-size: 18px;
   }
 
-  
   .form__button {
     padding: 0;
     width: 100px;
     height: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .form__username,
+  .form__password {
+    width: 100%;
   }
 }
