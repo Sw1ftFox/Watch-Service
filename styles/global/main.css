@@ -689,6 +689,7 @@ body {
   .main__trendcards {
     justify-content: center;
     flex-wrap: wrap;
+    margin-left: 0;
   }
 
   .trendcards__trend {

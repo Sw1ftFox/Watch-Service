@@ -3,6 +3,8 @@
   grid-column-start: 2;
   grid-column-end: 3;
 
+  grid-row-start: 1;
+  grid-row-end: 2;
   height: 40%;
 }
 
@@ -12,6 +14,8 @@
 
   grid-column-start: 2;
   grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 4;
 }
 
 .main__title {
@@ -22,7 +26,6 @@
 
 .main__trendcards {
   display: flex;
-  flex-direction: row;
   justify-content: space-around;
   margin-top: 2.5%;
 }
